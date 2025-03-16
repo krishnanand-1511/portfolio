@@ -357,7 +357,7 @@
           <div class="portfolio-wrap">
             <img src="assets/img/project/musicplayer.jpg" class="img-fluid" alt="">
             <div class="portfolio-info">
-              <h4>Password-Generator</h4>
+              <h4>Department Fest Website</h4>
               <div class="portfolio-links">
                 <a href="https://asthrastc.github.io/Asthra2k24/" target="_blank"><i class="bx bx-info-circle"></i></a>
               </div>
@@ -509,21 +509,21 @@
       </div>
       <div class="row justify-content-center mb-3">
         <div class="col-12 col-lg-10">
-          <iframe id="resumeIframe" src="" class="centered-frame" style="width: 85%; height:590px; border: none; overflow: auto;" frameborder="0"></iframe>
+          <iframe id="resumeIframe" src="assets/img/Krishnanand.pdf" class="centered-frame" style="width: 85%; height:590px; border: none; overflow: auto;" frameborder="0"></iframe>
         </div>
       </div>
        
-      <div class="row mt-3 btn-container justify-content-center">
-        <div class="col-12 col-sm-4 col-md-3 col-lg-2 mb-2">
+      <!-- <div class="row mt-3 btn-container justify-content-center">
+         <div class="col-12 col-sm-4 col-md-3 col-lg-2 mb-2">
           <button onclick="downloadResume()" class="custom-btn">Download</button>
-        </div>
+        </div> 
         <div class="col-12 col-sm-4 col-md-3 col-lg-2 mb-2">
           <button onclick="shareResume()" class="custom-btn">Share</button>
         </div>
-        <div class="col-12 col-sm-4 col-md-3 col-lg-2 mb-2">
+         <div class="col-12 col-sm-4 col-md-3 col-lg-2 mb-2">
           <button onclick="printResume()" class="custom-btn">Print</button>
-        </div>
-      </div>
+        </div> 
+      </div> -->
 
       <style>
         .custom-btn {
@@ -631,74 +631,74 @@
   </section> <!--End Links Section -->
 
   <script>
-    function downloadResume() {
-      window.open('https://drive.google.com/uc?export=download&id=1Fma34sTK2yHTwByhTr1JkA_2R1fipU2s', '_blank');
-    }
+    // function downloadResume() {
+    //   window.open('https://drive.google.com/uc%3Fexport%3Ddownload%26id%3D176YtAxbXiXnNvyIPw1kAXO4uSLsU8xBa', '_blank');
+    // }
 
-    function shareResume() {
-      const shareUrl = 'https://drive.google.com/file/d/1Fma34sTK2yHTwByhTr1JkA_2R1fipU2s/view?usp=sharing';
+    // function shareResume() {
+    //   const shareUrl = 'https://drive.google.com/file/d/176YtAxbXiXnNvyIPw1kAXO4uSLsU8xBa/view?usp=sharing';
       
-      // Define parameters for each platform
-      const shareData = {
-        title: 'Check out my resume!',
-        text: 'Here is my updated resume. Click the link to view.',
-        url: shareUrl,
-      };
+    //   // Define parameters for each platform
+    //   const shareData = {
+    //     title: 'Check out my resume!',
+    //     text: 'Here is my updated resume. Click the link to view.',
+    //     url: shareUrl,
+    //   };
       
-      // Use navigator.share if available (modern browsers supporting Web Share API)
-      if (navigator.share) {
-        navigator.share(shareData)
-          .then(() => console.log('Shared successfully'))
-          .catch((error) => console.error('Error sharing:', error));
-      } else {
-        // Fallback for browsers that do not support Web Share API
-        const platform = detectPlatform(); // Implement detectPlatform() function to determine platform
-        switch (platform) {
-          case 'whatsapp':
-            window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(shareData.text)} ${encodeURIComponent(shareData.url)}`, '_blank');
-            break;
-          case 'instagram':
-            window.open(`https://www.instagram.com/share?url=${encodeURIComponent(shareData.url)}`, '_blank');
-            break;
-          case 'linkedin':
-            window.open(`https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(shareData.url)}&title=${encodeURIComponent(shareData.title)}&summary=${encodeURIComponent(shareData.text)}`, '_blank');
-            break;
-          case 'email':
-            window.location.href = `mailto:?subject=${encodeURIComponent(shareData.title)}&body=${encodeURIComponent(shareData.text)} ${encodeURIComponent(shareData.url)}`;
-            break;
-          default:
-            alert('Sharing via this platform is not supported.');
-        }
-      }
-    }
+    //   // Use navigator.share if available (modern browsers supporting Web Share API)
+    //   if (navigator.share) {
+    //     navigator.share(shareData)
+    //       .then(() => console.log('Shared successfully'))
+    //       .catch((error) => console.error('Error sharing:', error));
+    //   } else {
+    //     // Fallback for browsers that do not support Web Share API
+    //     const platform = detectPlatform(); // Implement detectPlatform() function to determine platform
+    //     switch (platform) {
+    //       case 'whatsapp':
+    //         window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(shareData.text)} ${encodeURIComponent(shareData.url)}`, '_blank');
+    //         break;
+    //       case 'instagram':
+    //         window.open(`https://www.instagram.com/share?url=${encodeURIComponent(shareData.url)}`, '_blank');
+    //         break;
+    //       case 'linkedin':
+    //         window.open(`https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(shareData.url)}&title=${encodeURIComponent(shareData.title)}&summary=${encodeURIComponent(shareData.text)}`, '_blank');
+    //         break;
+    //       case 'email':
+    //         window.location.href = `mailto:?subject=${encodeURIComponent(shareData.title)}&body=${encodeURIComponent(shareData.text)} ${encodeURIComponent(shareData.url)}`;
+    //         break;
+    //       default:
+    //         alert('Sharing via this platform is not supported.');
+    //     }
+    //   }
+    // }
 
-    function detectPlatform() {
-      // Implement logic to detect platform based on user agent or other methods
-      // Return 'whatsapp', 'instagram', 'linkedin', 'email', etc. based on the platform detected
-      // Example:
-      const userAgent = navigator.userAgent.toLowerCase();
-      if (userAgent.includes('whatsapp')) {
-        return 'whatsapp';
-      } else if (userAgent.includes('instagram')) {
-        return 'instagram';
-      } else if (userAgent.includes('linkedin')) {
-        return 'linkedin';
-      } else {
-        return 'email';
-      }
-    }
+    // function detectPlatform() {
+    //   // Implement logic to detect platform based on user agent or other methods
+    //   // Return 'whatsapp', 'instagram', 'linkedin', 'email', etc. based on the platform detected
+    //   // Example:
+    //   const userAgent = navigator.userAgent.toLowerCase();
+    //   if (userAgent.includes('whatsapp')) {
+    //     return 'whatsapp';
+    //   } else if (userAgent.includes('instagram')) {
+    //     return 'instagram';
+    //   } else if (userAgent.includes('linkedin')) {
+    //     return 'linkedin';
+    //   } else {
+    //     return 'email';
+    //   }
+    // }
 
-    function printResume() {
-      const iframe = document.getElementById('resumeIframe');
-      iframe.src = 'assets/img/Eric.pdf';
-     // iframe.contentWindow.focus();
-      const newWindow = window.open(iframe.src, '_blank');
-      newWindow.focus();
-     // newWindow.onload = function() {
-     //   newWindow.print();
-   // };
-       iframe.contentWindow.print();
-    }
+  //   function printResume() {
+  //     const iframe = document.getElementById('resumeIframe');
+  //     iframe.src = 'assets/img/Krishnanand.pdf';
+  //    // iframe.contentWindow.focus();
+  //     const newWindow = window.open(iframe.src, '_blank');
+  //     newWindow.focus();
+  //    // newWindow.onload = function() {
+  //    //   newWindow.print();
+  //  // };
+  //      iframe.contentWindow.print();
+  //   }
 </script>
 
   
